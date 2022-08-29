@@ -1,6 +1,5 @@
 :root {
   --color-primary: #1565C0;
-  /* --bgcolor-primary: #b92b27; */
 }
 
 body {
@@ -99,7 +98,7 @@ body {
   font-size: 1.75em;
 }
 
-.somos {
+.somos__container {
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -130,7 +129,7 @@ body {
 }
 
 .program__card {
-  padding: 30px 0;
+  padding: 40px 0;
   margin: 20px 0;
   background-position: center center;
   background-size: cover;
@@ -211,4 +210,53 @@ body {
   padding: 10px 0;
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(121,9,9,0) 50%, rgba(255,0,0,1) 100%);
   text-align: center;
+}
+
+
+@media (min-width: 720px){
+
+  .nav__container{
+    display: flex;
+  }
+  .nav__items{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+  .nav__title {
+    margin-bottom: 0;
+  }
+  .nav__item{
+    padding-left: 17px;
+  }
+
+  .somos__img{
+    content: url(./media/somos-proya.jpg);
+  }
+  .somos__container, .features__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .programs__all{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .program__card{
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+  }
+  .program__paragraph {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .feature__img{
+    content: url(./media/background-2.jpeg);
+  }
+
 }
